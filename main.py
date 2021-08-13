@@ -20,7 +20,7 @@ def set_scrapper():
    for year in elections:
       if year['year'] in ['2017']:
          #if file_exists('all_candidates_%s.json' % (year['year'])):
-         scrap = scrapper_last_years.scrapper(year['year'], year['url'])
+         scrap = scrapper_last_years.Scrapper(year['year'], year['url'])
    return scrap
   
    
