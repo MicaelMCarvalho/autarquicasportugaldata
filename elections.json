@@ -1,0 +1,14 @@
+[
+    {
+        "year": "2009",
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+    },
+    {
+        "year": "2013",
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+    },
+    {
+        "year": "2017",
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+    }
+]
