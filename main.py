@@ -1,6 +1,7 @@
 #! /usr/bin/python
 import json
 from scrapper import scrapper_last_years
+from mining import mining
 
 def file_exists(filename):
    try:
@@ -11,12 +12,14 @@ def file_exists(filename):
       print("%s does not exist." % (filename))
       return False
 
+def load_candidates(filename):
+   with open(filename,'r') as f:
+      return json.load(f)
 
 def set_scrapper():
    #TODO add structure with all the years with elections. Grouping by url.
    # In dev , we will use only one year
-   elections = open('elections.json', 'r')
-   elections = json.load(elections)
+   load_candidates('elections.json')
    for year in elections:
       if year['year'] in ['2017']:
          #if file_exists('all_candidates_%s.json' % (year['year'])):
@@ -27,8 +30,14 @@ def set_scrapper():
 def main():
    #TODO Set option to choose between scrapp and mining
    # Dev phase, only scrapper
-   scrap = set_scrapper()
-   scrap.iterateUrl()
+   #scrap = set_scrapper()
+   #scrap.iterateUrl()
+
+   tua_mae = load_candidates('all_candidates_2017.json')
+   candidates_de_coimbra = mining.Mining("Coimbra",tua_mae).get_candidate_by_conselho()
+
+   print (candidates_de_coimbra)
+
 
 
 if __name__ == "__main__":
