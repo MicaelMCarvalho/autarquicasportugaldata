@@ -18,7 +18,7 @@ class Filter:
 
     def _save_to_file(self, data):
         with open('organized_%s' % (self.filepath) ,'w') as f:
-            json.dump(data, f, sort_keys=True, indent=4)
+            json.dump(data, f, sort_keys=True, indent=4, ensure_ascii=False)
 
 
     def _add_entry(self, data, entry):
