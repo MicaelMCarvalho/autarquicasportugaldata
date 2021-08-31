@@ -1,6 +1,6 @@
 #! /usr/bin/python
 import json
-from scrapper import scrapper_last_years
+from scrapper import scrapper_last_years, filter
 from mining import mining
 
 def file_exists(filename):
@@ -34,6 +34,8 @@ def main():
    #scrap.iterateUrl()
 
    tua_mae = load_candidates('all_candidates_2017.json')
+   sorter = filter.Filter()
+   data = sorter.get_organiz_data('all_candidates_2017.json')
    candidates_de_coimbra = mining.Mining("Coimbra",tua_mae).get_candidate_by_conselho()
 
    print (candidates_de_coimbra)
