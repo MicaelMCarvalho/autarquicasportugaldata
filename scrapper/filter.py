@@ -6,7 +6,7 @@ The data will be organize by district and county
 import json
 
 class Filter:
-    def __init__(self, ):
+    def __init__(self):
         pass
 
     def _file_manager(self):
@@ -16,33 +16,31 @@ class Filter:
         return data
 
 
-    def _save_to_file(self, data):
-        with open('organized_%s' % (self.filepath) ,'w') as f:
+    def _save_to_file(self, data, year):
+        with open('autarquicas_%s.json' % (year) ,'w') as f:
             json.dump(data, f, sort_keys=True, indent=4, ensure_ascii=False)
 
-
     def _add_entry(self, data, entry):
-        president = ''
-
         for elem in entry['candidates']:
-            elem.pop('url')
-            if int(elem['presidents']) == 1: 
-                president = elem['effectiveCandidates']
-        result = { 'candidates': entry['candidates'], 'president': president}
+            print(elem)
+            try:
+                elem.pop('url')
+                elem.pop('alternateCandidates')
+            except:
+                pass
+        #result = { 'candidates': entry['candidates'], 'president': president}
         
         try:
-            data[entry['parentTerritoryName']][entry['territoryName']] = result
+            data[entry['parentTerritoryName']][entry['territoryName']] = entry['candidates']
         except:
             data[entry['parentTerritoryName']] = {}
-            data[entry['parentTerritoryName']][entry['territoryName']] = result
+            data[entry['parentTerritoryName']][entry['territoryName']] = entry['candidates']
             pass
         return data
 
-
-    def get_organiz_data(self, filepath):
-        self.filepath = filepath
-        data = self._file_manager()
+    def get_organized_data(self, data, year):
+        #data = self._file_manager()
         result = {}
         for entry in data['candidate']:
             result = self._add_entry(result, entry)
-        self._save_to_file(result)
+        self._save_to_file(result, year)
