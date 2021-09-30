@@ -1,14 +1,30 @@
 [
     {
         "year": "2009",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json",
+        "url_votes": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/territory-results/TERRITORY-RESULTS-%s-CM.json",
+        "url_territorykey": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/territory-children/TERRITORY-CHILDREN-%s.json",
+        "main_territorykey": "LOCAL-500000"
     },
     {
         "year": "2013",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json",
+        "url_votes": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/territory-results/TERRITORY-RESULTS-%s-CM.json",
+        "url_territorykey": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/territory-children/TERRITORY-CHILDREN-%s.json",
+        "main_territorykey": "LOCAL-500000"
     },
     {
         "year": "2017",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2017/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s-ELECTED-FALSE.json",
+        "url_votes": "https://www.eleicoes.mai.gov.pt/autarquicas2017/static-data/territory-results/TERRITORY-RESULTS-%s-CM.json",
+        "url_territorykey": "https://www.eleicoes.mai.gov.pt/autarquicas2017/static-data/territory-children/TERRITORY-CHILDREN-%s.json",
+        "main_territorykey": "LOCAL-500000"
+    },
+    {
+        "year": "2021",
+        "url": "https://www.autarquicas2021.mai.gov.pt/frontend/data/PartiesCandidates?electionId=CM&page=%s",
+        "url_votes": "https://www.autarquicas2021.mai.gov.pt/frontend/data/TerritoryResults?territoryKey=%s&electionId=CM",
+        "url_territorykey": "https://www.autarquicas2021.mai.gov.pt/frontend/data/TerritoryChildren?territoryKey=%s",
+        "main_territorykey": "LOCAL-500000"
     }
 ]
