@@ -29,6 +29,7 @@ class scrapper:
    def start_scrapper(self):
       sort_out = Filter()
       for year in self.year:
+         print(' ++++++++++ Starting Year %s ++++++++++' % (year))
          location_keys = self.get_location_key(year)
          data = self.iterateUrl(year)
          data = sort_out.get_organized_data(data, year)
@@ -51,6 +52,7 @@ class scrapper:
       return dictAllInfo
 
    def get_location_key(self, year):
+      print(self.url_territorykey[year] % (self.main_territorykey[year]))
       response = requests.get(self.url_territorykey[year] % (self.main_territorykey[year]))
       data = response.json()
       dict_locations = {}

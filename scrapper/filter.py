@@ -56,7 +56,10 @@ class Filter:
                 if entry['acronym'] == candidate['party']:
                     candidate['votes'] = {} 
                     candidate['votes'] = entry 
-                    candidate['votes'].pop('imageKey')
+                    try:
+                        candidate['votes'].pop('imageKey')
+                    except:
+                        pass
             
             new_data['total_votes'] = {
                 "availableMandates": votes["availableMandates"],
