@@ -1,14 +1,9 @@
 [
     {
-        "year": "2009",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2009/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
-    },
-    {
-        "year": "2013",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
-    },
-    {
-        "year": "2017",
-        "url": "https://www.eleicoes.mai.gov.pt/autarquicas2013/static-data/candidates/PARTIES-CANDIDATES-CM-PAGE-%s.json"
+        "year": "2021",
+        "url": "https://www.autarquicas2021.mai.gov.pt/frontend/data/PartiesCandidates?electionId=CM&page=%s",
+        "url_votes": "https://www.autarquicas2021.mai.gov.pt/frontend/data/TerritoryResults?territoryKey=%s&electionId=CM",
+        "url_territorykey": "https://www.autarquicas2021.mai.gov.pt/frontend/data/TerritoryChildren?territoryKey=%s",
+        "main_territorykey": "LOCAL-500000"
     }
 ]
